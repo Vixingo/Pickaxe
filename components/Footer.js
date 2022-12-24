@@ -25,7 +25,7 @@ function Footer() {
             >
                 <Container>
                     <Grid container>
-                        <Grid item xs={4}>
+                        <Grid item md={4} xs={12} sx={{ textAlign: "center" }}>
                             <Image
                                 src={"/img/footer.png"}
                                 width={262}
@@ -37,20 +37,22 @@ function Footer() {
                                 }}
                             />
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={12} md={8}>
                             <Typography
+                                mb={1}
                                 sx={{ fontSize: "14px", fontWeight: "700" }}
                             >
                                 CHATBOT
                             </Typography>
-                            <Typography
-                                variant="h4"
-                                component={"h1"}
-                                fontWeight={700}
-                            >
+                            <Typography variant="h2" component={"h1"}>
                                 Pickaxe FAQ Receptionist
                             </Typography>
-                            <Typography fontWeight={300} component={"h6"}>
+                            <Typography
+                                fontWeight={300}
+                                component={"h6"}
+                                mt={0.5}
+                                mb={3}
+                            >
                                 Ask me anything about Pickaxe and the new beta!
                             </Typography>
                             <Box

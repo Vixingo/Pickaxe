@@ -18,6 +18,29 @@ export default function App({ Component, pageProps }) {
                 },
                 typography: {
                     fontFamily: "Open Sans",
+                    h1: {
+                        fontSize: "40px",
+                        lineHeight: "50px",
+                        fontWeight: "700",
+                        "@media (max-width:600px)": {
+                            fontSize: "24px",
+                            lineHeight: "30px",
+                        },
+                    },
+                    h2: {
+                        fontSize: "32px",
+                        fontWeight: "700",
+                        "@media (max-width:600px)": {
+                            fontSize: "24px",
+                        },
+                    },
+                    h3: {
+                        fontSize: "24px",
+                        fontWeight: "500",
+                        "@media (max-width:600px)": {
+                            fontSize: "16px",
+                        },
+                    },
                 },
             }),
         [prefersDarkMode]

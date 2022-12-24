@@ -58,22 +58,24 @@ export default function Home() {
             </Container>
             <Container sx={{ textAlign: "center", margin: "70px auto" }}>
                 <Typography
+                    variant="h1"
+                    component={"h1"}
                     sx={{
                         marginBottom: "10px",
-                        fontWeight: "600",
-                        fontSize: "40px",
                     }}
                 >
                     Pickaxe is under construction
                 </Typography>
                 <Typography
+                    variant="h3"
                     sx={{
-                        fontSize: "24px",
                         lineHeight: "30px",
                         margin: "0 auto",
-                        maxWidth: "516px",
-                        fontWeight: "500",
+                        maxWidth: "570px",
                         marginBottom: "26px",
+                        "@media (max-width:600px)": {
+                            padding: "0 50px",
+                        },
                     }}
                 >
                     But the beta version is open to anyone who asks. It&apos;s
