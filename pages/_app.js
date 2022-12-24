@@ -12,6 +12,9 @@ export default function App({ Component, pageProps }) {
             createTheme({
                 palette: {
                     mode: prefersDarkMode ? "light" : "light",
+                    primary: {
+                        main: "#112f45",
+                    },
                 },
                 typography: {
                     fontFamily: "Open Sans",

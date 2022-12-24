@@ -2,7 +2,19 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-import { Button, Container, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    Container,
+    Grid,
+    IconButton,
+    InputAdornment,
+    Paper,
+    TextField,
+    Typography,
+} from "@mui/material";
+import Link from "next/link";
+import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,35 +33,71 @@ export default function Home() {
                 />
                 <link rel="icon" href="/img/logo.png" />
             </Head>
-            <Container sx={{ marginTop: "26px" }}>
+            <Container
+                sx={{
+                    marginTop: "26px",
+                    display: "flex",
+                    alignItems: "center",
+                }}
+            >
                 <Image
-                    src={"/img/navLogo.png"}
+                    src={"/img/logo.png"}
                     alt={"pickaxe_logo"}
-                    width={144}
+                    width={32}
                     height={32}
                 />
-            </Container>
-            <Container>
-                <Typography>Pickaxe is under construction</Typography>
                 <Typography
                     sx={{
-                        fontFamily: "Open Sans",
+                        fontSize: "32px",
+                        margin: " 0 10px",
+                        fontWeight: "600",
+                    }}
+                >
+                    Pickaxe
+                </Typography>
+            </Container>
+            <Container sx={{ textAlign: "center", margin: "70px auto" }}>
+                <Typography
+                    sx={{
+                        marginBottom: "10px",
+                        fontWeight: "600",
+                        fontSize: "40px",
+                    }}
+                >
+                    Pickaxe is under construction
+                </Typography>
+                <Typography
+                    sx={{
                         fontSize: "24px",
                         lineHeight: "30px",
+                        margin: "0 auto",
+                        maxWidth: "516px",
+                        fontWeight: "500",
+                        marginBottom: "26px",
                     }}
                 >
-                    But the beta version is open to anyone who asks. It's free
-                    and (semi)-ready to be tested!
+                    But the beta version is open to anyone who asks. It&apos;s
+                    free and (semi)-ready to be tested!
                 </Typography>
-                <Button
-                    sx={{
-                        fontWeight: "800",
-                        textTransform: "unset",
-                    }}
+                <a
+                    href="//beta.pickaxeproject.com"
+                    target={"_blank"}
+                    rel="noreferrer"
                 >
-                    Visit beta
-                </Button>
+                    <Button
+                        variant="contained"
+                        sx={{
+                            fontWeight: "800",
+                            textTransform: "unset",
+                            fontSize: "16px",
+                            padding: "16px 46px",
+                        }}
+                    >
+                        Visit beta
+                    </Button>
+                </a>
             </Container>
+            <Footer />
         </>
     );
 }
