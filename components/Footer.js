@@ -9,6 +9,7 @@ import {
     Typography,
 } from "@mui/material";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Footer() {
     const [ask, setAsk] = useState(false);
@@ -74,9 +75,7 @@ function Footer() {
                                     onClick={() => {
                                         setAsk(true);
                                     }}
-                                    variant={
-                                        ask == false ? "outlined" : "contained"
-                                    }
+                                    variant={ask ? "contained" : "outlined"}
                                     sx={{
                                         border: "2px solid #112f45",
                                         marginLeft: "-1px",
@@ -101,18 +100,31 @@ function Footer() {
                                     minHeight: "100px",
                                 }}
                             >
-                                <Box
-                                    sx={{
-                                        display: "inline",
-                                    }}
-                                >
-                                    {" "}
-                                    <Image
-                                        src={"/img/logo.png"}
+                                {" "}
+                                <Box>
+                                    <motion.img
+                                        src="/img/logo.png"
                                         width={20}
                                         height={20}
                                         alt="logo"
+                                        animate={
+                                            ask
+                                                ? { rotate: 720 }
+                                                : { rotate: 0 }
+                                        }
+                                        transition={{
+                                            repeat: Infinity,
+                                            duration: 2,
+                                        }}
                                     />
+                                    {/* <Image
+                                            src={"/img/logo.png"}
+                                            width={20}
+                                            height={20}
+                                            alt="logo"
+                                        />
+                                    </motion.img> */}
+
                                     <Typography
                                         sx={{
                                             marginLeft: "10px",
@@ -123,7 +135,7 @@ function Footer() {
                                         {" "}
                                         AI Output
                                     </Typography>
-                                </Box>{" "}
+                                </Box>
                             </Paper>
                         </Grid>
                     </Grid>
