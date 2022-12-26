@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
                     },
                 },
                 typography: {
-                    fontFamily: "Open Sans",
+                    fontFamily: "Real Head Pro",
                     h1: {
                         fontSize: "40px",
                         lineHeight: "50px",
@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
                     },
                     h3: {
                         fontSize: "24px",
-                        fontWeight: "500",
+                        fontWeight: "400",
                         "@media (max-width:600px)": {
                             fontSize: "16px",
                         },
