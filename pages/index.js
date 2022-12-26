@@ -71,7 +71,7 @@ export default function Home() {
                         maxWidth: "570px",
                         marginBottom: "26px",
                         "@media (max-width:600px)": {
-                            padding: "0 50px",
+                            padding: "0 30px",
                         },
                     }}
                 >
